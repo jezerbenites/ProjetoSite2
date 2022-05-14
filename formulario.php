@@ -17,10 +17,11 @@
         print_r('Estado: ' . $_POST['estado']);
         print_r('<br>');
         print_r('Endereço: ' . $_POST['endereco']);
- */     
+   */   
         include_once('config.php');
 
         $nome =      $_POST['nome'];
+        $senha=      $_POST['senha'];
         $email =     $_POST['email'];
         $telefone =  $_POST['telefone'];
         $sexo =      $_POST['genero'];
@@ -29,8 +30,10 @@
         $estado =    $_POST['estado'];
         $endereco =  $_POST['endereco'];
 
-        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,email,telefone,sexo,data_nasc,cidade,estado,endereco)
-        VALUES('$nome','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");        
+        $result = mysqli_query($conexao, "INSERT INTO usuarios(nome,senha,email,telefone,sexo,data_nasc,cidade,estado,endereco)
+        VALUES ('$nome','$senha','$email','$telefone','$sexo','$data_nasc','$cidade','$estado','$endereco')");
+        
+        header('Location: login.php');
     }
 
 ?>
@@ -53,7 +56,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             background-color: rgba(0, 0, 0, 0.6);
-            padding: 15px;
+            padding: 15px;/*Borda da box */
             border-radius: 15px;
             width: 25%; /*largura da box*/
         }
@@ -117,6 +120,7 @@
     </style>
 </head>
 <body>
+<a href="home.php">Voltar</a>
     <div class="box">
         <form action="formulario.php" method="POST">
             <fieldset>
@@ -125,6 +129,11 @@
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
                     <label for="nome" class="labelInput">Nome completo</label>
+                </div>
+                <br><br>
+                <div class="inputBox">
+                    <input type="password" name="senha" id="senha" class="inputUser" required>
+                    <label for="senha" class="labelInput">Senha</label>
                 </div>
                 <br><br>
                 <div class="inputBox">
