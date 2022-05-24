@@ -21,7 +21,7 @@
         include_once('config.php');
 
         $nome =      $_POST['nome'];
-        $senha =      $_POST['senha'];
+        $senha =     $_POST['senha'];
         $email =     $_POST['email'];
         $telefone =  $_POST['telefone'];
         $sexo =      $_POST['genero'];
@@ -45,29 +45,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário | Jéz </title>
     <style>
+        :root {
+            --cor1: #4ab5ca;
+            --cor2: #16dac6;
+            --cor3: #23c587;
+            --cor4: #0cf259;
+            --cor5: #15eb20;
+        }
         body{
             font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71)); /*degrade da cor*/
+            background-image: linear-gradient(to left, var(--cor2) 30%, var(--cor4) 80%); /*degrade da cor*/
         }
         .box{
-            color: white;
+            color: black;
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: rgba(0, 0, 0, 0.6);
+            background-color: rgba(10, 30, 10, 0.4);
             padding: 15px;/*Borda da box */
             border-radius: 15px;
             width: 25%; /*largura da box*/
         }
         fieldset{
-            border: 3px solid dodgerblue;
+            border: 3px solid #23c587;
         }
         legend{
-            border: 1px solid dodgerblue;
+            border: 1px solid #23c587;
             padding: 10px;
             text-align: center; /*alinhar centro*/
-            background-color: dodgerblue;
+            background-color: #23c587;
             border-radius: 8px;
             
         }
@@ -77,7 +84,7 @@
         .inputUser{
             background: none;
             border: none;
-            border-bottom: 1px solid white;
+            border-bottom: 1px solid black;
             outline: none;
             color: white;
             font-size: 15px;
@@ -105,17 +112,17 @@
             font-size: 15px; /*aumenta a fonte*/
         }
         #submit{
-            background-image: linear-gradient(to right, rgb(0, 92, 197), rgb(90, 20, 220));
+            background-color: var(--cor4);
             width: 100%;
             border: none;
             padding: 15px;
-            color: white;
-            font-size: 15px;
+            color: black;
+            font-size: 25px;
             cursor: pointer;
             border-radius: 10px;
         }
         #submit:hover{
-            background-image: linear-gradient(to right, rgb(0, 92, 172), rgb(80, 19, 195));
+            background-image: linear-gradient(to right, hwb(140 3% 24%), hwb(192 2% 15%));
         }
     </style>
 </head>
@@ -124,7 +131,7 @@
     <div class="box">
         <form action="formulario.php" method="POST">
             <fieldset>
-                <legend><b>Formulário de Clientes</b></legend> <!--<b></b> deixa em negrito-->
+                <legend><b>Serviço Social</b></legend> <!--<b></b> deixa em negrito-->
                 <br>
                 <div class="inputBox">
                     <input type="text" name="nome" id="nome" class="inputUser" required>
@@ -135,7 +142,7 @@
                     <input type="password" name="senha" id="senha" class="inputUser" required>
                     <label for="senha" class="labelInput">Senha</label>
                 </div>
-                <br><br>asd
+                <br><br>
                 <div class="inputBox">
                     <input type="text" name="email" id="email" class="inputUser" required>
                     <label for="email" class="labelInput">E-mail</label>

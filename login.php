@@ -6,10 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tela de login</title>
     <style> /* Começo do Css */
+        :root {
+            --cor1: #4ab5ca;
+            --cor2: #16dac6;
+            --cor3: #23c587;
+            --cor4: #0cf259;
+            --cor5: #15eb20;
+        }
         body{
-            font-family: Arial, Helvetica, sans-serif;
-            background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
-            
+            background-color: white;
+            background: linear-gradient(to left, var(--cor2) 30%, var(--cor4) 80%);
+            background-size: cover;
+            overflow: hidden;
         }
         div{
             background-color: rgba(0, 0, 0, 0.6);
@@ -53,8 +61,6 @@
             <br><br>
             <input class="inputSubmit" type="submit" name="submit" value="Enivar">
         </form>
-
-
     </div>
 </body>
 </html>

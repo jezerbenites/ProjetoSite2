@@ -6,9 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SITE | JÉZ</title>
     <style>
+        :root {
+            --cor1: #4ab5ca;
+            --cor2: #16dac6;
+            --cor3: #23c587;
+            --cor4: #0cf259;
+            --cor5: #15eb20;
+        }
         body{
             font-family: Arial,Helvetica,sans-serif;
-            background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));
+            background: linear-gradient(to left, var(--cor2) 30%, var(--cor4) 80%);
             text-align: center;
             color: white;
         }

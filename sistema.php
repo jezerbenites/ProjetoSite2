@@ -24,13 +24,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.1.3/dist/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <title>Sistema | Jéz</title>
     <style>
+        :root {
+          --cor1: #4ab5ca;
+          --cor2: #16dac6;
+          --cor3: #23c587;
+          --cor4: #0cf259;
+          --cor5: #15eb20;
+        }
         body{
-            background: linear-gradient(to right, rgb(20, 147, 220), rgb(17, 54, 71));            
-            color: white;
+            background-image: linear-gradient(to left, var(--cor2) 30%, var(--cor4) 80%); /*degrade da cor*/
+            color: black;
             text-align: center;
         }
         .table-bg{
-          background: rgba(0,0,0,0.3);
+          background: rgba(0,0,0,0.8);
           border-radius: 15px 15px 0 0;  
         }
     </style>
