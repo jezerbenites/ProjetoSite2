@@ -2,7 +2,7 @@
 
     if(isset($_POST['submit']))
     {
-/*         print_r('Nome: ' . $_POST['nome']);
+/*      print_r('Nome: ' . $_POST['nome']);
         print_r('<br>');
         print_r('E-mail: ' . $_POST['email']);
         print_r('<br>');
@@ -62,9 +62,9 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            background-color: rgba(10, 30, 10, 0.4);
+            background-color: white;
             padding: 15px;/*Borda da box */
-            border-radius: 15px;
+            border-radius: 25px;
             width: 25%; /*largura da box*/
         }
         fieldset{
@@ -105,7 +105,7 @@
             color: dodgerblue;
         }
         #data_nascimento{
-            border: none;
+            border-radius: black;
             padding: 8px;
             border-radius: 10px;
             outline: none;
@@ -127,7 +127,7 @@
     </style>
 </head>
 <body>
-<a href="home.php">Voltar</a>
+<button><a href="home.php">Voltar</a></button>
     <div class="box">
         <form action="formulario.php" method="POST">
             <fieldset>
