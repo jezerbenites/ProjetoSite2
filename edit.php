@@ -146,7 +146,7 @@
                 <input type="radio" id="feminino" name="genero" value="feminino" <?php echo($sexo == 'feminino') ? 'checked' : '' ?>>
                 <label for="feminino">Feminino</label>
                 <br>
-                <input type="radio" id="masculino" name="genero" value="masculino"<?php echo ($sexo == 'masculino') ? 'checked' : '' ?>>
+                <input type="radio" id="masculino" name="genero" value="masculino"<?php echo($sexo == 'masculino') ? 'checked' : '' ?>>
                 <label for="masculino">Masculino</label>
                 <br>
                 <input type="radio" id="outro" name="genero" value="outro" <?php echo($sexo == 'outro') ? 'checked' : '' ?>>
@@ -170,7 +170,7 @@
                     <label for="endereco" class="labelInput">Endereço</label>
                 </div>
                 <br><br>
-                <input type="hidden" name="id" value="<?php echo $id?>">
+                <input type="hidden" name="id" value="<?php echo $id ?>">
                 <input type="submit" name="update" id="update">
             </fieldset>
 

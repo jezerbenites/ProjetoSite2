@@ -43,91 +43,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styleform.css">
     <title>Formulário | Jéz </title>
-    <style>
-        :root {
-            --cor1: #4ab5ca;
-            --cor2: #16dac6;
-            --cor3: #23c587;
-            --cor4: #0cf259;
-            --cor5: #15eb20;
-        }
-        body{
-            font-family: Arial, Helvetica, sans-serif;
-            background-image: linear-gradient(to left, var(--cor2) 30%, var(--cor4) 80%); /*degrade da cor*/
-        }
-        .box{
-            color: black;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            background-color: white;
-            padding: 15px;/*Borda da box */
-            border-radius: 25px;
-            width: 25%; /*largura da box*/
-        }
-        fieldset{
-            border: 3px solid #23c587;
-        }
-        legend{
-            border: 1px solid #23c587;
-            padding: 10px;
-            text-align: center; /*alinhar centro*/
-            background-color: #23c587;
-            border-radius: 8px;
-            
-        }
-        .inputBox{
-            position: relative;
-        }
-        .inputUser{
-            background: none;
-            border: none;
-            border-bottom: 1px solid black;
-            outline: none;
-            color: white;
-            font-size: 15px;
-            width: 100%;
-            letter-spacing: 2px; /*aumenta espaçamento caracter*/
-        }
-        .labelInput{
-            position: absolute;
-            top: 0px;
-            left: 0px;
-            pointer-events: none;
-            transition: .5s;
-        }
-        .inputUser:focus ~ .labelInput,
-        .inputUser:valid ~ .labelInput{ /*joga os input pra cima*/
-            top: -20px;
-            font-size: 12px;
-            color: dodgerblue;
-        }
-        #data_nascimento{
-            border-radius: black;
-            padding: 8px;
-            border-radius: 10px;
-            outline: none;
-            font-size: 15px; /*aumenta a fonte*/
-        }
-        #submit{
-            background-color: var(--cor4);
-            width: 100%;
-            border: none;
-            padding: 15px;
-            color: black;
-            font-size: 25px;
-            cursor: pointer;
-            border-radius: 10px;
-        }
-        #submit:hover{
-            background-image: linear-gradient(to right, hwb(140 3% 24%), hwb(192 2% 15%));
-        }
-    </style>
 </head>
 <body>
-<button><a href="home.php">Voltar</a></button>
+<button><a href="index.php">Voltar</a></button>
     <div class="box">
         <form action="formulario.php" method="POST">
             <fieldset>

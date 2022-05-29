@@ -28,10 +28,10 @@
             overflow: hidden;
         }
         button {
-            background-color: transparent;
+            background-color: white;
             border: 1px solid var(--cor4);
             padding: 7.5px;
-            width: 120px;
+            max-width: 200px;
             font-weight: bold;
             font-size: 0.8em;
             border-radius: 5px;
@@ -39,14 +39,14 @@
             outline: none;
             transition: all .4s ease-out;
         }
+        button:hover {
+            background-color: var(--cor4);
+            color: rgb(0, 0, 0);
+        }
         h1 {
             text-decoration: none;
             text-align: center;
             margin-bottom: 20px;
-        }
-        button:hover {
-            background-color: var(--cor4);
-            color: rgb(0, 0, 0);
         }
         .box{
             position: absolute;
@@ -122,7 +122,7 @@
     </style>
 </head>
 <body>
-    <button><a href="home.php">Voltar</a></button>
+    <button><a href="index.php">Voltar</a></button>
     <div class="box">
         <h1>Login</h1>
         <form action="testLogin.php" method="POST">

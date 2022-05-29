@@ -17,7 +17,7 @@
         $sqlUpdate = "UPDATE usuarios SET nome='$nome',senha='$senha',email='$email',telefone='$telefone',sexo='$sexo',data_nasc='$data_nasc',cidade='$cidade',estado='$estado',endereco='$endereco'
         WHERE id='$id'";
 
-        $result = $conexao ->query($sqlUpate);
+        $result = $conexao->query($sqlUpdate);
     }
     header('Location: sistema.php');
 
