@@ -7,108 +7,114 @@
     <title>Serviço Social</title>
     <style>
 
-    :root {
-        --cor1: #4ab5ca;
-        --cor2: #16dac6;
-        --cor3: #23c587;
-        --cor4: #0cf259;
-        --cor5: #15eb20;
-    }
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
 
-    * {
-        margin: 0px;
-        padding: 0px;
-        box-sizing: border-box;
-        font-family: Helvetica;
-        color: #323232;
-        border: none;
-    }
+:root {
+    --cor1: #4ab5ca;
+    --cor2: #16dac6;
+    --cor3: #23c587;
+    --cor4: #0cf259;
+    --cor5: #15eb20;
+}
 
-    body{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        align-content: center;
-        background-color: white;
-        background: linear-gradient(to left, var(--cor2) 30%, var(--cor4) 80%);
-        background-size: cover;
-        overflow: hidden;
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Helvetica;
+    color: #323232;
+    border: none;
+}
 
-    }
+body{
+    background-color: white;
+    background: linear-gradient(45deg, var(--cor2) 30%, var(--cor4) 80%);
+    background-size: cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
 
-    body h1 {
-        text-align: center;
-        font-weight: bold;
-        color: #2b2b2b;
-        padding-top: 40px;
-    }
+body h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    text-align: center;
+    font-weight: bold;
+    color: #2b2b2b;
+    padding-top: 40px;
+    font-size: 3rem;
+}
 
-    body h2 {
-        text-align: center;
-        font-weight: bold;
-        color: #2b2b2b;
-        padding-top: 30px;
-    }
+body h2 {
+    text-align: center;
+    font-weight: bold;
+    color: #2b2b2b;
+    padding-top: 30px;
+}
 
-    .box{
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        background-color: white;
-        padding: 25px;
-        border-radius: 10px;
-    }
+.box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+    margin: auto;
+}
 
-    body img {
-        background-color: white;
-        border-radius: 60px;
-        margin: 20px;
-        max-height: 200px;
+.imagem {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 200px;
+    margin: auto;
+    background-color: white;
+    width: 200px;
+    border-radius: 20%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
 
-    }
+a{
+    text-decoration: none;
+    color: #323232;
+    font-family: Arial, Helvetica, sans-serif;
+    border-radius: 10px;
+    padding: 10px;
+}
 
-    a{
-        text-decoration: none;
-        color: #323232;
-        font-family: Arial, Helvetica, sans-serif;
-        border-radius: 10px;
-        padding: 10px;
-    }
+button {
+    background-color: transparent;
+    border: 1px solid var(--cor4);
+    padding: 7px;
+    margin: 5px;
+    width: 120px;
+    font-weight: bold;
+    font-size: 0.8em;
+    border-radius: 5px;
+    cursor: pointer;
+    outline: none;
+    transition: all .4s ease-out;
+}
 
-    button {
-        background-color: transparent;
-        border: 1px solid var(--cor4);
-        padding: 7.5px;
-        width: 120px;
-        font-weight: bold;
-        font-size: 0.8em;
-        border-radius: 5px;
-        cursor: pointer;
-        outline: none;
-        transition: all .4s ease-out;
-    }
+button:hover {
+    background-color: var(--cor4);
+    color: rgb(0, 0, 0);
+}
 
-    button:hover {
-        background-color: var(--cor4);
-        color: rgb(0, 0, 0);
-    }
-
-    .rodape p {
-        color: #323232;
-        font-weight: bold;
-        text-align: center;
-        padding-top: 300px;
-    }
     </style>
 </head>
 <body>
-    <h1>Bem-Vindo</h1>
-    <img src="imagens\logo-serviço.png" alt="Logo Serviço Social">
-    <div class="box">
-        <button><a href="login.php">Login</a></button><!-- Redireciona para "tal" pagina -->
-        <button><a href="formulario.php">Cadastre-se</a></button>
+    <div class="container-geral">
+        <h1>Crie sua conta</h1>
+        <div class="imagem">
+        <img src="imagens\logo-serviço.png" alt="Logo Serviço Social">
+        </div>
+        <div class="box">
+            <button><a href="login.php">Login</a></button><!-- Redireciona para "tal" pagina -->
+            <button><a href="formulario.php">Cadastre-se</a></button>
+        </div>
     </div>
 </body>
 </html>
