@@ -6,7 +6,7 @@
     {
         unset($_SESSION['email']);
         unset($_SESSION['senha']);
-        header('Location: login.php');
+        header('Location: sistema.php');
     }
     $logado = $_SESSION['email'];
     if(!empty($_GET['search']))
@@ -21,12 +21,29 @@
     $result = $conexao->query($sql);
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="apple-touch-icon" sizes="57x57" href="imagens/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="imagens/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="imagens/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="imagens/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="imagens/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="imagens/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="imagens/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="imagens/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="imagens/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="imagens/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="imagens/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="imagens/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="imagens/favicon-16x16.png">
+    <link rel="manifest" href="imagens/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="imagens/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <title>SISTEMA</title>
     <style>
         :root {
@@ -37,31 +54,41 @@
           --cor5: #15eb20;
         }
         body{
-            background-image: linear-gradient(to left, var(--cor2) 30%, var(--cor4) 80%); /*degrade da cor*/
+            background-image: linear-gradient(45deg, var(--cor2) 30%, var(--cor4) 80%); /*degrade da cor*/
+            background-attachment: fixed;
             color: black;
             text-align: center;
         }
-        .table-bg{
-          background: rgba(0,0,0,0.8);
-          border-radius: 15px 15px 0 0;  
+
+        h1 {
+            color: #323232;
+            font-weight: bold;
         }
+        .table-bg{
+            background: rgba(0,0,0,0.8);
+            border-radius: 15px 15px 0 0; 
+
+        }
+
         .box-search{
+            margin-bottom: 10px;
             display: flex;
             justify-content: center;
             gap: .1%;
         }
+
     </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-green">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">SISTEMA DO SERVIÇO SOCIAL</a>
+            <a style="color: #323232" class="navbar-brand" href="#"><strong>SISTEMA DO SERVIÇO SOCIAL</strong></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
         </div>
         <div class="d-flex">
-            <a href="form.php" class="btn btn-primary me-5">Formulário</a>
+            <a href="form.php" class="btn btn-primary me-5" style="color: white">Formulário</a>
         </div>
         <div class="d-flex">
             <a href="sair.php" class="btn btn-danger me-5">Sair</a>
@@ -80,7 +107,7 @@
             </svg>
         </button>
     </div>
-    <div class="m-5">
+    <div>
         <table class="table text-white table-bg">
             <thead>
                 <tr>

@@ -1,0 +1,22 @@
+      function drawDashboard() {
+
+        var data = google.visualization.arrayToDataTable([
+          ['Data Entrada','Etnia', 'Domicilio', 'Mortalidade', 'Rendimento'],
+          <?php 
+
+          include_once('configForm.php');
+          $sql = "SELECT * FROM usuarios";
+          $buscar = mysqli_query($conexao,$sql);
+
+          while($dados = mysqli_fetch_array($buscar)){
+            $data_ent = $dados['data_ent'];
+            $etnia = $dados['etnia'];
+            $domicilio = $dados['domicilio'];
+            $mortalidade = $dados['mortalidade'];
+            $rendimento = $dados['rendimento'];
+
+          ?>
+          ['<?php echo $data_ent ?>', '<?php echo $etnia ?>', '<?php echo $domicilio ?>', '<?php echo $mortalidade ?>', '<?php echo $rendimento?> '],
+
+        <?php }?>
+        ]);
